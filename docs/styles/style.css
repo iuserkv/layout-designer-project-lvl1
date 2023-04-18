@@ -48,6 +48,8 @@ h1, h2, h3 {
     font-weight: lighter;
     line-height: 1.2em;
     font-family: Neucha, sans-serif;
+
+    color: var(--base);
 }
 
 h1 {
@@ -63,6 +65,10 @@ h2 {
 
 h3 {
     font-size: 34px;
+}
+
+.dark {
+    color: var(--dark);
 }
 
 header {
