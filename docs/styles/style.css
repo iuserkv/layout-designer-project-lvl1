@@ -79,6 +79,10 @@ header {
     background-color: var(--light);
 }
 
+.bg-dark {
+    background-color: var(--base-dark);
+}
+
 .background::before {
     content: "";
 
@@ -132,4 +136,21 @@ header {
     font-weight: bold;
     text-decoration: none;
     color: var(--white);
+}
+
+.video {
+    text-align: center;
+}
+.video h2 {
+    margin-bottom: 30px;
+}
+
+.video iframe {
+    margin-bottom: -200px;
+
+    filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.navigation {
+    padding-top: 200px;
 }
