@@ -71,6 +71,10 @@ h3 {
     color: var(--dark);
 }
 
+.white {
+    color: var(--white);
+}
+
 header {
     position: relative;
 }
@@ -152,5 +156,45 @@ header {
 }
 
 .navigation {
+    display: flex;
     padding-top: 200px;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navigation h2 {
+    font-size: 52px;
+}
+
+.navigation h3 {
+    color: var(--base);
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.card {
+    display: block;
+    box-sizing: border-box;
+    width: 350px;
+    margin-bottom: 20px;
+    padding: 24px;
+}
+
+h2.card {
+    padding: 0;
+}
+
+.card-number {
+    display: block;
+    margin-bottom: 40px;
+
+    font-size: 64px;
+    line-height: 1;
+    font-family: Neucha;
+
+    color: var(--base-dark);
 }
