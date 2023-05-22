@@ -75,7 +75,7 @@ h3 {
     color: var(--white);
 }
 
-header {
+header, section {
     position: relative;
 }
 
@@ -121,7 +121,9 @@ header {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+}
 
+header div.columns {
     margin-top: 180px;
 }
 
@@ -197,4 +199,42 @@ h2.card {
     font-family: Neucha;
 
     color: var(--base-dark);
+}
+
+.description {
+    display: block;
+}
+
+.left-image {
+    margin-right: 30px;
+}
+
+.description .subtitle {
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Neucha';
+
+    color: var(--transp-dark);
+}
+
+.description .abstract {
+    font-size: 34px;
+    line-height: 41px;
+    font-family: 'Neucha';
+
+    color: var(--dark);
+}
+
+.description h3 {
+    margin: 100px 0 20px 0;
+    padding: 5px 0 4px 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'Open Sans';
+
+    text-transform: uppercase;
+
+    color: var(--white);
+    background-color: var(--brown);
 }
