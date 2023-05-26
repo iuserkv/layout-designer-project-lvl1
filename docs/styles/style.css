@@ -75,6 +75,18 @@ h3 {
     color: var(--white);
 }
 
+.brown {
+    color: var(--brown);
+}
+
+.transp-dark {
+    color: var(--transp-dark);
+}
+
+.transp-white {
+    color: var(--transp-white);
+}
+
 header, section {
     position: relative;
 }
@@ -85,6 +97,14 @@ header, section {
 
 .bg-dark {
     background-color: var(--base-dark);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-brown {
+    background-color: var(--brown);
 }
 
 .background::before {
@@ -209,20 +229,20 @@ h2.card {
     margin-right: 30px;
 }
 
+.right-image {
+    margin-left: 30px;
+}
+
 .description .subtitle {
     font-size: 24px;
     line-height: 29px;
     font-family: 'Neucha';
-
-    color: var(--transp-dark);
 }
 
 .description .abstract {
     font-size: 34px;
     line-height: 41px;
     font-family: 'Neucha';
-
-    color: var(--dark);
 }
 
 .description h3 {
@@ -234,7 +254,4 @@ h2.card {
     font-family: 'Open Sans';
 
     text-transform: uppercase;
-
-    color: var(--white);
-    background-color: var(--brown);
 }
