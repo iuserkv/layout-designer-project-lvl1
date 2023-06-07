@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header class="bg-light background">
+    <header class="bg-light bg-image">
         <div class="content">
             <h1>Когнитивные<br>
                 искажения<br>
                 <span class="dark">в программировании</span>
             </h1>
-            <img class="header-image" src="images/main.png" alt="Когнитивные искажения в программировании">
+            <img src="images/main.png" alt="Когнитивные искажения в программировании">
             <div class="columns">
                 <div>
                     <p>Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивностью. Но мы часто игнорируем целостную картину. Некоторые из этих проблем малозаметны, некоторые существенны. Иногда с ними можно как-то справиться, а иногда, к сожалению, нет.</p>
@@ -45,34 +45,34 @@
                     которых стоит<br>
                     помнить</span>
                 </h2>
-                <a class="card bg-light" href="#1">
+                <a class="card bg-light" href="#ikea-effect">
                     <span class="card-number">1</span>
                     <h3>Эффект ИКЕА</h3>
                     <p>Вы переоцениваете собственные решения, и, как следствие, недооцениваете решения других.</p>
                 </a>
-                <a class="card bg-light" href="#2">
+                <a class="card bg-light" href="#premature-optimization">
                     <span class="card-number">2</span>
                     <h3>Преждевременная оптимизация</h3>
                     <p>Вы оптимизируете что-то задолго до того, как в этом появляется необходимость.</p>
                 </a>
-                <a class="card bg-light" href="#3">
+                <a class="card bg-light" href="#distortion-of-novelty">
                     <span class="card-number">3</span>
                     <h3>Искажение новизны</h3>
                     <p>Вы даёте более высокую оценку тем событиям, которые произошли недавно, и недооцениваете более старые.</p>
                 </a>
-                <a class="card bg-light" href="#4">
+                <a class="card bg-light" href="#hyperbolic-depreciation">
                     <span class="card-number">4</span>
                     <h3>Гиперболическое обесценивание</h3>
                     <p>Вы гонитесь за немедленной маленькой выгодой и игнорируете более крупную, недоступную сейчас, но доступную в будущем.</p>
                 </a>
-                <a class="card bg-light" href="#5">
+                <a class="card bg-light" href="#errors-in-planning">
                     <span class="card-number">5</span>
                     <h3>Ошибка планирования</h3>
                     <p>Неправильно рассчитывать время необходимое для завершения задачи.</p>
                 </a>
             </div>
         </section>
-        <section class="bg-light background">
+        <section class="bg-light bg-image">
             <div id="ikea-effect" class="content description">
                 <div class="columns">
                     <img class="left-image" src="./images/1.png" alt="Эффект ИКЕА">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-brown background">
+        <section class="bg-brown bg-image">
             <div id="premature-optimization" class="content description">
                 <div class="columns">
                     <div>
@@ -114,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-light background">
+        <section class="bg-light bg-image">
             <div id="distortion-of-novelty" class="content description">
                 <div class="columns">
                     <img class="left-image"  src="./images/3.png" alt="Искажение новизны">
@@ -135,7 +135,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-brown background">
+        <section class="bg-brown bg-image">
             <div id="hyperbolic-depreciation" class="content description">
                 <div class="columns">
                     <div>
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg-light background">
+        <section class="bg-light bg-image">
             <div id="errors-in-planning" class="content description">
                 <div class="columns">
                     <img class="left-image" src="./images/5.png" alt="Ошибка планирования">
@@ -181,22 +181,27 @@
     </main>
     <footer>
         <div class="content">
-            <section>
-                <h2>Хотите узнать больше? Подпишитесь на обновления</h2>
-                <form>
-                    <label>
-                        Электронная почта
-                        <input type="email" name="email" placeholder="Ваша электронная почта">
-                    </label>
-                    <button name="submit">Отправить</button>
-                    <p>Подписываясь, вы принимаете <a href="#">правила сервиса</a></p>
-                </form>
-            </section>
-            <section>
+            <div class="columns bg-dark">
+                <div class="left-column">
+                    <h3>Хотите узнать больше?<br>
+                        Подпишитесь на обновления</h3>
+                </div>
+                <div class="right-column">
+                    <form>
+                        <label>
+                            Электронная почта<br>
+                            <input type="email" name="email" placeholder="Ваша электронная почта">
+                        </label>
+                        <button name="submit"></button>
+                        <p class="rules">Подписываясь, вы принимаете <a href="#">правила сервиса</a></p>
+                    </form>
+                </div>
+            </div>
+            <div class="contacts">
                 <p>© 2020 Константин Константинопольский</p>
-                <p>По материалам статьи <a href="#">Yash Ranadive Cognitive Biases in Programming</a></p>
-                <p><a href="#">Курсы программирования Hexlet</a></p>
-            </section>
+                <p>По материалам статьи <a href="https://medium.com/hackernoon/cognitive-biases-in-programming-5e937707c27b">Yash Ranadive Cognitive Biases in Programming</a></p>
+                <p><a href="https://ru.hexlet.io/">Курсы программирования Hexlet</a></p>
+            </div>
         </div>
     </footer>
 </body>

@@ -32,6 +32,7 @@
     --transp-dark: #908d8b;
     --brown: #b09a81;
     --blue: #1085c5;
+    --select: #ea7600;
 }
 
 body {
@@ -107,7 +108,7 @@ header, section {
     background-color: var(--brown);
 }
 
-.background::before {
+.bg-image::before {
     content: "";
 
     position: absolute;
@@ -130,28 +131,28 @@ header, section {
     padding: 100px 0;
 }
 
-.header-image {
-    position: absolute;
-    top: 55px;
-    right: -270px;
-    height: 525px;
-}
-
 .columns {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-header div.columns {
-    margin-top: 180px;
-}
-
 .columns div {
     flex-basis: calc(50% - 15px);
 }
 
-.button-more {
+header img {
+    position: absolute;
+    top: 55px;
+    right: -270px;
+    height: 525px;
+}
+
+header .columns {
+    margin-top: 180px;
+}
+
+header .button-more {
     display: inline-block;
 
     margin-top: 30px;
@@ -164,17 +165,24 @@ header div.columns {
     color: var(--white);
 }
 
+header .button-more:hover {
+    background-color: var(--select);
+}
+
 .video {
     text-align: center;
 }
+
 .video h2 {
     margin-bottom: 30px;
 }
 
 .video iframe {
+    position: relative;
     margin-bottom: -200px;
-
     filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+
+    z-index: 100;
 }
 
 .navigation {
@@ -185,20 +193,7 @@ header div.columns {
     justify-content: space-between;
 }
 
-.navigation h2 {
-    font-size: 52px;
-}
-
-.navigation h3 {
-    color: var(--base);
-}
-
-.navigation a {
-    text-decoration: none;
-    color: var(--dark);
-}
-
-.card {
+.navigation .card {
     display: block;
     box-sizing: border-box;
     width: 350px;
@@ -206,11 +201,28 @@ header div.columns {
     padding: 24px;
 }
 
-h2.card {
-    padding: 0;
+.navigation .card:hover .card-number, .card:hover h3{
+    background-color: var(--base);
+    color: var(--white);
 }
 
-.card-number {
+.navigation h2.card {
+    padding: 0;
+
+    font-size: 52px;
+}
+
+.navigation a.card {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.navigation a.card:hover {
+    background-color: var(--base);
+    color: var(--white);
+}
+
+.navigation .card-number {
     display: block;
     margin-bottom: 40px;
 
@@ -221,15 +233,19 @@ h2.card {
     color: var(--base-dark);
 }
 
+.navigation h3 {
+    color: var(--base);
+}
+
 .description {
     display: block;
 }
 
-.left-image {
+.description .left-image {
     margin-right: 30px;
 }
 
-.right-image {
+.description .right-image {
     margin-left: 30px;
 }
 
@@ -254,4 +270,84 @@ h2.card {
     font-family: 'Open Sans';
 
     text-transform: uppercase;
+}
+
+footer .columns {
+    height: 190px;
+
+    color: var(--white);
+}
+
+footer .left-column {
+    margin: auto;
+
+    text-align: center;
+}
+
+footer h3 {
+    color: var(--white);
+}
+
+footer .right-column {
+    margin: auto;
+}
+
+footer form label {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+footer form input {
+    box-sizing: border-box;
+    width: 423px;
+    height: 50px;
+    padding: 15px;
+
+    border-style: none;
+}
+
+footer form button {
+    position: relative;
+    width: 70px;
+    height: 50px;
+    top: -4px;
+    left: -6px;
+    padding: 0;
+
+    background-color: var(--base);
+    border-style: none;
+}
+
+footer form button::before {
+    content: "";
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: calc((100% - 20px) / 2);
+    left: calc((100% - 20px) / 2);
+
+    background-image: url("../images/send.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+footer form button:hover {
+    background-color: var(--select);
+}
+
+footer form p.rules {
+    font-size: 12px;
+    margin: 0;
+}
+
+footer form p.rules a {
+    color: var(--white);
+}
+
+footer .contacts {
+    margin-top: 60px;
+
+    font-size: 14px;
+    text-align: center;
 }
