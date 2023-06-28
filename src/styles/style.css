@@ -35,9 +35,48 @@
     --select: #ea7600;
 }
 
+.white {
+    color: var(--white);
+}
+
+.transp-white {
+    color: var(--transp-white);
+}
+
+.dark {
+    color: var(--dark);
+}
+
+.transp-dark {
+    color: var(--transp-dark);
+}
+
+.brown {
+    color: var(--brown);
+}
+
+.bg-white {
+    background-color: var(--white);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+.bg-dark {
+    background-color: var(--base-dark);
+}
+
+.bg-brown {
+    background-color: var(--brown);
+}
+
 body {
+    margin: 0;
+    padding: 0;
+
     font-size: 16px;
-    line-height: 1.6 em;
+    line-height: 25px;
     font-family: "Open Sans", sans-serif;
 
     color: var(--dark);
@@ -68,44 +107,14 @@ h3 {
     font-size: 34px;
 }
 
-.dark {
-    color: var(--dark);
-}
-
-.white {
-    color: var(--white);
-}
-
-.brown {
-    color: var(--brown);
-}
-
-.transp-dark {
-    color: var(--transp-dark);
-}
-
-.transp-white {
-    color: var(--transp-white);
+p {
+    margin-block: 0;
+    margin-inline: 0;
+    margin-bottom: 1em;
 }
 
 header, section {
     position: relative;
-}
-
-.bg-light {
-    background-color: var(--light);
-}
-
-.bg-dark {
-    background-color: var(--base-dark);
-}
-
-.bg-white {
-    background-color: var(--white);
-}
-
-.bg-brown {
-    background-color: var(--brown);
 }
 
 .bg-image::before {
@@ -119,6 +128,7 @@ header, section {
 
     background-image: url("../images/background.png");
     background-size: cover;
+    background-origin: border-box;
     background-repeat: no-repeat;
 
     opacity: 0.1;
@@ -128,7 +138,7 @@ header, section {
     position: relative;
     width: 1110px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 106px 0 0 15px;
 }
 
 .columns {
@@ -141,6 +151,10 @@ header, section {
     flex-basis: calc(50% - 15px);
 }
 
+header {
+    height: 913px;
+}
+
 header img {
     position: absolute;
     top: 55px;
@@ -149,18 +163,19 @@ header img {
 }
 
 header .columns {
-    margin-top: 180px;
+    margin-top: 192px;
 }
 
 header .button-more {
     display: inline-block;
 
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 12px 24px;
 
     background-color: var(--base);
 
     font-weight: bold;
+    text-transform: uppercase;
     text-decoration: none;
     color: var(--white);
 }
@@ -174,11 +189,12 @@ header .button-more:hover {
 }
 
 .video h2 {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .video iframe {
     position: relative;
+    margin-top: 13px;
     margin-bottom: -200px;
     filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 
@@ -187,7 +203,8 @@ header .button-more:hover {
 
 .navigation {
     display: flex;
-    padding-top: 200px;
+    padding-top: 300px;
+    padding-bottom: 80px;
 
     flex-wrap: wrap;
     justify-content: space-between;
@@ -201,8 +218,21 @@ header .button-more:hover {
     padding: 24px;
 }
 
+.navigation .card-number {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 40px;
+
+    line-height: 1;
+
+    font-size: 64px;
+    font-family: Neucha, sans-serif;
+
+    color: var(--base-dark);
+}
+
 .navigation h2.card {
-    padding: 0;
+    padding: 5px 0 0;
 
     font-size: 52px;
 }
@@ -212,23 +242,39 @@ header .button-more:hover {
     color: var(--dark);
 }
 
-.navigation .card-number {
-    display: block;
-    margin-bottom: 40px;
-
-    font-size: 64px;
-    line-height: 1;
-    font-family: Neucha, sans-serif;
-
-    color: var(--base-dark);
+.navigation h3 {
+    padding-bottom: 10px;
+    color: var(--base);
 }
 
-footer h3 {
+.navigation .card p {
+    margin-bottom: 0px;
+}
+
+a.card:hover,
+.card:hover .card-number,
+.card:hover h3 {
+    background-color: var(--base);
     color: var(--white);
 }
 
-.navigation h3 {
-    color: var(--base);
+.description {
+    display: block;
+    padding-top: 100px;
+    padding-bottom: 97px;
+}
+
+.description .left-image {
+    margin-right: 30px;
+}
+
+.description .right-image {
+    margin-left: 30px;
+}
+
+.description h2 {
+    margin: 0;
+    padding: 2px 1px 1px 1px;
 }
 
 .description h3 {
@@ -242,21 +288,9 @@ footer h3 {
     text-transform: uppercase;
 }
 
-.navigation a.card:hover, .card:hover .card-number, .card:hover h3 {
-    background-color: var(--base);
-    color: var(--white);
-}
-
-.description {
-    display: block;
-}
-
-.description .left-image {
-    margin-right: 30px;
-}
-
-.description .right-image {
-    margin-left: 30px;
+.description p {
+    margin: 0;
+    padding: 2px 1px 1px 1px;
 }
 
 .description .subtitle {
@@ -266,30 +300,38 @@ footer h3 {
 }
 
 .description .abstract {
+    padding-top: 25px;
     font-size: 34px;
     line-height: 41px;
     font-family: Neucha, sans-serif;
 }
 
+#errors-in-planning {
+    padding-bottom: 125px;
+}
+
 footer .columns {
-    height: 190px;
+    margin-top: -6px;
 
     color: var(--white);
 }
 
 footer .left-column {
     margin: auto;
-
-    text-align: center;
+    padding: 57px 0px 50px 55px;
 }
 
-footer .right-column {
-    margin: auto;
+footer h3 {
+    color: var(--white);
+}
+
+footer form {
+    margin: 33px 0 0 -13px;
 }
 
 footer form label {
     font-size: 18px;
-    line-height: 40px;
+    line-height: 41px;
 }
 
 footer form input {
@@ -297,16 +339,17 @@ footer form input {
     width: 423px;
     height: 50px;
     padding: 15px;
-
     border-style: none;
+
+    font-size: 12.3px;
 }
 
 footer form button {
     position: relative;
-    width: 70px;
+    width: 63px;
     height: 50px;
     top: -4px;
-    left: -6px;
+    left: -4px;
     padding: 0;
 
     background-color: var(--base);
@@ -332,8 +375,7 @@ footer form button:hover {
 }
 
 footer form p.rules {
-    font-size: 12px;
-    margin: 0;
+    font-size: 12.2px;
 }
 
 footer form p.rules a {
@@ -341,7 +383,7 @@ footer form p.rules a {
 }
 
 footer .contacts {
-    margin-top: 60px;
+    margin-top: 75px;
 
     font-size: 14px;
     text-align: center;
