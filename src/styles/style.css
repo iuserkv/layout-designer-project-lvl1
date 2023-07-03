@@ -137,8 +137,8 @@ header, section {
 .content {
     position: relative;
     width: 1110px;
-    margin: 0 auto;
-    padding: 106px 0 0 15px;
+    margin: auto;
+    padding: 106px 0 0 2px;
 }
 
 .columns {
